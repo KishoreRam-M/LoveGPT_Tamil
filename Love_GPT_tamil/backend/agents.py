@@ -4,10 +4,11 @@ from crewai import LLM
 from dotenv import load_dotenv
 
 load_dotenv()
+api_key = os.getenv("GEMINI_API_KEY")
 
 gemini_llm = LLM(
-    model="gemini/gemini-2.5-flash",
-    api_key="AIzaSyBgzArzLPeeinip1YI6Va37F5257rfFH2U",
+    model="gemini-2.5-flash",
+    api_key=api_key,
 )
 
 Love_Story_Collector_Agent = Agent(
